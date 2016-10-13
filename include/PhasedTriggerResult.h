@@ -2,9 +2,16 @@
 #define _PHASED_TRIGGER_RESULT_H
 
 
+
+
 namespace PhasedTrigger
 {
 
+  /** This class stores the result of the trigger simulation
+   *
+   *  For now it's just a yes/no and a status, but we can think of more stuff to put here. 
+   *
+   */ 
   class TriggerResult
   {
 

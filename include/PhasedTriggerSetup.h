@@ -7,6 +7,12 @@
 namespace PhasedTrigger
 {
 
+
+  /** This class contains all the setup information that the trigger simulation needs to know. 
+   *
+   *  The user should populate the fields that are different from the defaults. 
+   *
+   */ 
   class TriggerSetup
   {
     public: 
@@ -16,6 +22,7 @@ namespace PhasedTrigger
       // Antenna properties
       size_t NAntennas; //Number of antennas
       std::vector<double> antennaZs; // Z positions of antennas, in m, relative coords are all that matter
+      double refractiveIndex;  // average refractive index of ice? 
 
       //Waveform properties
       size_t Nbits; // Number of bits 
@@ -30,7 +37,6 @@ namespace PhasedTrigger
 
 
       /// what else? 
-     
 
       //set defaults
       TriggerSetup()
@@ -45,6 +51,7 @@ namespace PhasedTrigger
         sampleRateGHz = 1.5; 
         nsamples = 1024; // FIXME
         sumWidth = 16; 
+        refractiveIndex = 1.7; 
       }
       
   }; 
